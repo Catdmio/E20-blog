@@ -13,5 +13,6 @@ User.destroy_all
 	p = Post.create(title: "Post #{i}", content: "Contenido #{i}", user: u)
 10.times do |j|
 	c = p.comments.build(content: "comentario #{j} del post #{i}", user: u, post: p)
+c.save!
 end
 end
