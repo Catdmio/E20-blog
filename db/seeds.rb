@@ -11,6 +11,7 @@ User.destroy_all
 10.times do |i|
 	u = User.create(name: "User #{i}", email: "Email#{i}@gmail.com", password: "12345678")
 	p = Post.create(title: "Post #{i}", content: "Contenido #{i}", user: u)
+	u.save!
 10.times do |j|
 	c = p.comments.build(content: "comentario #{j} del post #{i}", user: u, post: p)
 c.save!
