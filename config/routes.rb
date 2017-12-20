@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-# appname/post/:id/comment
-# appname/post/:id/:id
-
 	resources :posts do
 		resources :comments, only: [:create, :destroy]
 	end

@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def show
     @comments = @post.comments
   end
-
   # GET /posts/new
   def new
     @post = Post.new

@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-# El tipo de dato es entero, pero con el indice del array lo asocia
-# a símbolos: ej
+  # El tipo de dato es entero, pero con el indice del array lo asocia a
+  # simbolos: ej user.role = 0 => admin
   enum role: [:admin, :visit]
 end
